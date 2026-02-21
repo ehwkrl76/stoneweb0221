@@ -1137,3 +1137,19 @@ nav {
     }
 
 }
+/* --- Mobile menu force show (temporary fix) --- */
+@media (max-width: 900px){
+  header, .header, .topbar, .navbar { 
+    display: block !important; 
+    position: relative !important;
+    z-index: 9999 !important;
+  }
+  nav, .nav, .navigation, .menu, .nav-links, .menu-items {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
