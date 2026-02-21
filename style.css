@@ -828,8 +828,7 @@ nav{
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: block;
+   
     }
 
     header {
@@ -1214,6 +1213,7 @@ nav{
     }
 
 }
+
 
 
 
