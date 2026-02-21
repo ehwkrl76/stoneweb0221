@@ -827,7 +827,7 @@ nav{
     }
 }
 
-@media (max-width: 768px) {
+ {
    
     }
 
@@ -1214,31 +1214,76 @@ nav{
 
 }
 
-/* ===== FINAL OVERRIDE: mobile menu must be horizontal ===== */
-@media (max-width: 900px){
-  .nav-links{
-    display: flex !important;
-    flex-direction: row !important;   /* ✅ 가로 */
-    align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 14px !important;
+/* ===== HEADER FINAL FIX (StoneWeb) ===== */
 
-    /* 메뉴 4개면 보통 한 줄, 그래도 안전하게 */
-    flex-wrap: nowrap !important;
+/* 데스크탑: 로고 왼쪽 / 메뉴 오른쪽 */
+header nav.container{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  position: relative !important;
+}
+
+/* 로고 absolute 남아있어도 무조건 해제 */
+header nav.container .logo{
+  position: static !important;
+  left: auto !important;
+  margin: 0 !important;
+}
+
+/* 메뉴는 항상 가로 */
+header nav.container .nav-links{
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 24px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+header nav.container .nav-links li{
+  display: inline-flex !important;
+}
+
+header nav.container .nav-links a{
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+}
+
+/* 모바일: 로고/메뉴 간격 + 메뉴 가로 유지(넘치면 스크롤) */
+@media (max-width: 900px){
+  header nav.container{
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;                /* ✅ 로고-메뉴 간격 */
+  }
+
+  header nav.container .logo{
+    padding-bottom: 6px !important;      /* ✅ 한 칸 더 */
+  }
+
+  header nav.container .nav-links{
+    width: 100% !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+
     overflow-x: auto !important;
     white-space: nowrap !important;
-    padding-top: 10px !important;
-    margin-top: 8px !important;
+    -webkit-overflow-scrolling: touch !important;
+
+    padding-top: 8px !important;         /* ✅ 메뉴를 더 아래로 */
+    border-top: 1px solid rgba(255,255,255,0.08) !important;
   }
 
-  .nav-links li{
-    display: inline-flex !important;
+  header nav.container .nav-links::-webkit-scrollbar{
+    display: none !important;
   }
 
-  .nav-links a{
-    display: inline-flex !important;
-    padding: 8px 6px !important;
-    white-space: nowrap !important;
+  /* 모바일 햄버거 버튼은 일단 숨김(지금은 안 쓰니까) */
+  header nav.container .mobile-menu-btn{
+    display: none !important;
   }
 }
 
