@@ -185,11 +185,7 @@ a {
 }
 
 /* =========================
-   HEADER REBUILD (Clean)
-   ========================= */
-
-/* =========================
-   HEADER CLEAN REBUILD
+   HEADER (Spacing Fixed)
    ========================= */
 
 header{
@@ -197,69 +193,85 @@ header{
   top: 0;
   width: 100%;
   z-index: 1000;
-  padding: 20px 0;
+  padding: 18px 0;
   transition: var(--transition-smooth);
   border-bottom: 1px solid transparent;
 }
 
 header.scrolled{
-  background: rgba(10, 11, 16, 0.85);
+  background: rgba(10, 11, 16, 0.88);
   backdrop-filter: blur(15px);
   border-bottom: 1px solid var(--glass-border);
-  padding: 15px 0;
+  padding: 14px 0;
 }
 
+/* 데스크탑 */
 nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* 로고 왼쪽 / 메뉴 오른쪽 */
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px; /* 로고-메뉴 기본 간격 */
 }
 
-/* 로고 */
 .logo{
-  position: static;      /* absolute 제거 */
+  position: static;
   font-size: 24px;
   font-weight: 800;
+  line-height: 1;
   white-space: nowrap;
+  margin: 0;            /* 혹시 남아있는 마진 제거 */
+  padding: 0;
 }
 
 .logo span{
   color: var(--accent-clr);
 }
 
-/* 메뉴 */
 .nav-links{
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 36px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a{
   font-weight: 700;
 }
 
-/* ===== 모바일 ===== */
+/* ===== 모바일: 로고 위 / 메뉴 아래 + 간격 확실 ===== */
 @media (max-width: 900px){
 
   nav{
-    flex-direction: column;   /* 로고 위 / 메뉴 아래 */
+    flex-direction: column;
     align-items: flex-start;
-    padding: 0 16px;
+
+    gap: 14px;          /* ✅ 로고와 메뉴 사이 기본 간격 */
+    padding: 6px 16px;  /* ✅ 전체 위아래 여백 */
   }
 
   .logo{
     font-size: 18px;
-    margin-bottom: 8px;
+    padding-top: 2px;
+    padding-bottom: 6px; /* ✅ 로고 아래 여백(추가) */
   }
 
   .nav-links{
     width: 100%;
-    gap: 14px;
+    gap: 12px;
     justify-content: flex-start;
+
+    padding-top: 6px;   /* ✅ 메뉴를 한 칸 더 아래로 */
+    border-top: 1px solid rgba(255,255,255,0.08); /* ✅ 시각적 분리 */
+  }
+
+  /* 메뉴가 길면 가로 스크롤 */
+  .nav-links{
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -1202,5 +1214,6 @@ nav{
     }
 
 }
+
 
 
