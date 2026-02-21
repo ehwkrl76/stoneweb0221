@@ -1214,6 +1214,33 @@ nav{
 
 }
 
+/* ===== FINAL OVERRIDE: mobile menu must be horizontal ===== */
+@media (max-width: 900px){
+  .nav-links{
+    display: flex !important;
+    flex-direction: row !important;   /* ✅ 가로 */
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 14px !important;
+
+    /* 메뉴 4개면 보통 한 줄, 그래도 안전하게 */
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    padding-top: 10px !important;
+    margin-top: 8px !important;
+  }
+
+  .nav-links li{
+    display: inline-flex !important;
+  }
+
+  .nav-links a{
+    display: inline-flex !important;
+    padding: 8px 6px !important;
+    white-space: nowrap !important;
+  }
+}
 
 
 
