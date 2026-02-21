@@ -184,56 +184,82 @@ a {
     justify-content: center;
 }
 
-/* Header */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 20px 0;
-    transition: var(--transition-smooth);
-    border-bottom: 1px solid transparent;
+/* =========================
+   HEADER REBUILD (Clean)
+   ========================= */
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: var(--transition-smooth);
+  border-bottom: 1px solid transparent;
 }
 
-header.scrolled {
-    background: rgba(10, 11, 16, 0.85);
-    /* 다크 테마에 맞춰 어두운 배경으로 변경 */
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid var(--glass-border);
-    padding: 15px 0;
+header.scrolled{
+  background: rgba(10, 11, 16, 0.85);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 15px 0;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    /* 전체 요소를 중앙으로 */
-    align-items: center;
-    position: relative;
+nav{
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
-.logo {
-    position: absolute;
-    left: 24px;
-    /* 로고만 좌측 고정 */
-    font-size: 24px;
-    font-weight: 700;
+.logo{
+  position: static;   /* absolute 제거 */
+  left: auto;
+  font-size: 24px;
+  font-weight: 800;
+  white-space: nowrap;
 }
 
-.nav-links {
-    display: flex;
-    gap: 40px;
-    align-items: center;
+.logo span{
+  color: var(--accent-clr);
 }
 
-.logo span {
-    color: var(--accent-clr);
+.nav-links{
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
-.mobile-menu-btn {
-    display: none !important;
-    /* 데스크탑에서 확실히 숨김 */
+.nav-links a{
+  font-weight: 700;
 }
 
+.mobile-menu-btn{
+  display: none;
+}
+
+/* Mobile (menu 4개면 가로로 충분) */
+@media (max-width: 900px){
+  nav{
+    padding: 0 16px;
+  }
+  .logo{
+    font-size: 18px;
+  }
+  .nav-links{
+    gap: 14px;
+    justify-content: flex-end;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-links::-webkit-scrollbar{
+    display: none;
+  }
+}
 /* Hero Section */
 #hero {
     height: 100vh;
@@ -1137,76 +1163,3 @@ nav {
     }
 
 }
-/* --- Mobile menu force show (temporary fix) --- */
-@media (max-width: 900px){
-  header, .header, .topbar, .navbar { 
-    display: block !important; 
-    position: relative !important;
-    z-index: 9999 !important;
-  }
-  nav, .nav, .navigation, .menu, .nav-links, .menu-items {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-  }
-}
-
-@media (max-width: 900px){
-  .nav-links {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    gap: 20px !important;
-  }
-}
-
-
-/* === FORCE mobile top menu to HORIZONTAL (row) === */
-@media (max-width: 900px){
-  header nav,
-  .navbar nav,
-  .header nav,
-  nav {
-    display: block !important;
-  }
-
-  header nav ul,
-  .navbar ul,
-  nav ul,
-  header .nav-links,
-  .nav-links,
-  .menu,
-  .menu-items,
-  .navigation {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 14px !important;
-    margin: 0 !important;
-    padding: 10px 12px !important;
-    list-style: none !important;
-    text-align: left !important;
-  }
-
-  header nav ul li,
-  nav ul li,
-  .nav-links a,
-  nav a {
-    display: inline-flex !important;
-    align-items: center !important;
-    white-space: nowrap !important;
-  }
-
-  /* 메뉴가 많아 가로가 넘치면 옆으로 스크롤되게 */
-  header nav ul,
-  nav ul,
-  .nav-links {
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
