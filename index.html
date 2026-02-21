@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoneWeb Studio | 프리미엄 홈페이지 제작 에이전시</title>
+    <meta name="description" content="성공적인 비즈니스를 위한 전략적 웹사이트 제작. StoneWeb Studio는 프리미엄 디자인과 최신 기술로 당신의 가치를 증명합니다.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&family=Outfit:wght@300;400;600;700&family=Pretendard:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="container">
+            <a href="index.html" class="logo">StoneWeb<span>Studio</span></a>
+            <ul class="nav-links">
+                <li><a href="about.html">에이전시 소개</a></li>
+                <li><a href="#services">서비스</a></li>
+                <li><a href="#portfolio">포트폴리오</a></li>
+                <li><a href="quote.html" class="btn-primary">상담 신청</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-slider">
+                <!-- Slide 1 -->
+                <div class="slide active"
+                    style="background-image: linear-gradient(rgba(10, 11, 16, 0.7), rgba(10, 11, 16, 0.7)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80');">
+                    <div class="container hero-layout">
+                        <div class="hero-text">
+                            <span class="badge fade-up">SYSTEM_STATUS: STRATEGIC_READY</span>
+                            <h1 class="fade-up">비즈니스의 가치를<br><span>디지털로 설계하다</span></h1>
+                            <p class="fade-up delay-1">StoneWeb Studio는 단순한 웹사이트가 아닌, 기업의 성장 동력이 되는 디지털 엔진을 구축합니다.</p>
+                            <div class="hero-btns fade-up delay-2">
+                                <a href="#portfolio" class="btn-secondary">VIEW PROJECTS</a>
+                                <a href="quote.html" class="btn-primary">START_CONSULTING</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide"
+                    style="background-image: linear-gradient(rgba(10, 11, 16, 0.7), rgba(10, 11, 16, 0.7)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80');">
+                    <div class="container hero-layout">
+                        <div class="hero-text">
+                            <span class="badge fade-up">CORE_STRENGTH: OPTIMIZATION</span>
+                            <h1 class="fade-up">성장을 위한<br><span>최적의 개발 솔루션</span></h1>
+                            <p class="fade-up delay-1">비즈니스 모델에 맞춘 맞춤형 기능 개발로 운영 효율성을 극대화하세요.</p>
+                            <div class="hero-btns fade-up delay-2">
+                                <a href="#services" class="btn-secondary">OUR_SERVICES</a>
+                                <a href="quote.html" class="btn-primary">GET_STARTED</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Controls -->
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing/Services Section -->
+        <section id="services">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <h2>Our Service Plans</h2>
+                    <p>중소사업자의 규모와 필요에 맞는 전략적인 서비스 구성을 확인하세요.</p>
+                </div>
+                <div class="pricing-grid">
+                    <!-- Standard Plan -->
+                    <div class="pricing-card fade-up">
+                        <div class="plan-header">
+                            <h3>Standard</h3>
+                            <div class="price">15<span>만원</span></div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>간결하고 핵심적인 랜딩페이지</li>
+                            <li>반응형 웹 디자인 기본 적용</li>
+                            <li>기본 SEO 최적화</li>
+                            <li>실시간 상담 버튼 연결</li>
+                        </ul>
+                        <a href="quote.html?plan=Standard" class="btn-secondary">선택하기</a>
+                    </div>
+                    <!-- Deluxe Plan -->
+                    <div class="pricing-card featured fade-up delay-1">
+                        <div class="plan-badge">MOST_POPULAR</div>
+                        <div class="plan-header">
+                            <h3>Deluxe</h3>
+                            <div class="price">40<span>만원</span></div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>전략적 브랜드 스토리텔링 페이지</li>
+                            <li>고급 애니메이션 및 인터랙션</li>
+                            <li>맞춤형 상담 폼(견적서) 연동</li>
+                            <li>상세 사업 분석 기반 설계</li>
+                            <li>검색 엔진 유입 최적화</li>
+                        </ul>
+                        <a href="quote.html?plan=Deluxe" class="btn-primary">선택하기</a>
+                    </div>
+                    <!-- Premium Plan -->
+                    <div class="pricing-card fade-up delay-2">
+                        <div class="plan-header">
+                            <h3>Premium</h3>
+                            <div class="price">70<span>만원</span></div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>전문 비즈니스 솔루션 사이트</li>
+                            <li>멀티 페이지 및 커스텀 기능</li>
+                            <li>고해상도 프리미엄 이미지 제작</li>
+                            <li>지속적인 유지보수 파트너쉽</li>
+                            <li>웹 로그 및 마케팅 추적기 설치</li>
+                        </ul>
+                        <a href="quote.html?plan=Premium" class="btn-secondary">선택하기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        ...
+
+        <!-- Visual Break Section -->
+        <section class="visual-break"
+            style="background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1920&q=80');">
+            <div class="visual-content-box fade-up">
+                <span class="badge">SME_GROWTH_ENGINE</span>
+                <h2>상상을 넘어서는 디지털 임팩트</h2>
+                <p>소상공인 사장님들의 소중한 열정과 노하우가 디지털이라는 날개를 달아 더 넓은 세상으로 뻗어나갈 수 있도록 돕습니다. 복잡한 기술과 트렌드 분석은 StoneWeb Studio가
+                    책임집니다. 사장님은 오직 비즈니스의 본질과 고객 서비스에만 집중하세요. 우리는 단순한 제작업체를 넘어, 당신의 브랜드가 온라인에서도 독보적인 존재감을 가질 수 있도록 전략적으로
+                    설계하고 함께 성장하는 든든한 러닝메이트가 되어드리겠습니다. 디지털 혁신의 시작, 이제 StoneWeb과 함께 상상을 현실로 만드세요.</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <h2>Our Portfolio</h2>
+                    <p>StoneWeb Studio가 만들어낸 성공적인 프로젝트들을 만나보세요.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item fade-up">
+                        <div class="portfolio-img">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                                alt="핀테크 프로젝트">
+                        </div>
+                        <div class="portfolio-info">
+                            <span>Fintech</span>
+                            <h3>Nexus Fintech</h3>
+                            <p>금융 데이터 시각화 플랫폼</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-up delay-1">
+                        <div class="portfolio-img">
+                            <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?auto=format&fit=crop&w=800&q=80"
+                                alt="이커머스 프로젝트">
+                        </div>
+                        <div class="portfolio-info">
+                            <span>E-commerce</span>
+                            <h3>Aura Lifestyle</h3>
+                            <p>감각적인 라이프스타일 편집샵</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-up delay-2">
+                        <div class="portfolio-img">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+                                alt="기업 프로젝트">
+                        </div>
+                        <div class="portfolio-info">
+                            <span>Corporate</span>
+                            <h3>Core Systems</h3>
+                            <p>엔터프라이즈 통합 솔루션</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="cta-box fade-up"
+                style="background-image: linear-gradient(rgba(10, 11, 16, 0.8), rgba(10, 11, 16, 0.8)), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1500&q=80');">
+                <h2>함께 최고의 가치를 만들어보세요</h2>
+                <p>지금 바로 프로젝트에 대한 무료 상담을 신청하세요.</p>
+                <a href="quote.html" class="btn-primary">상담하기</a>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">StoneWeb<span>Studio</span></a>
+                    <p class="footer-pre-logo">프리미엄 전략형 홈페이지 제작 에이전시</p>
+                </div>
+                <div class="footer-info-details">
+                    <div class="info-group">
+                        <h4>Company Info</h4>
+                        <p>대표자: 신동원 | 상호명: StoneWeb Studio</p>
+                        <p>사업자등록번호: 728-09-03151</p>
+                        <p>이메일: <a href="mailto:ehwkrl76@naver.com">ehwkrl76@naver.com</a></p>
+                    </div>
+                    <div class="info-group">
+                        <h4>Payment</h4>
+                        <p>입금계좌: 우리은행 1002-267-067647</p>
+                        <p>예금주: StoneWeb Studio (신동원)</p>
+                    </div>
+                    <div class="info-group">
+                        <h4>Contact Us</h4>
+                        <p>연락처: 010-4645-2291</p>
+                        <p>상담 가능 시간: 평일 08:00 - 11:00</p>
+                        <p>(주말 및 공휴일 휴무)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 StoneWeb Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
