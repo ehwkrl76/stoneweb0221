@@ -1154,18 +1154,12 @@ nav {
   }
 }
 
-/* Mobile menu horizontal layout */
 @media (max-width: 900px){
-  nav ul {
+  .nav-links {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
-    align-items: center !important;
     gap: 20px !important;
-    padding: 10px 0;
-  }
-
-  nav ul li {
-    display: inline-block !important;
   }
 }
+
